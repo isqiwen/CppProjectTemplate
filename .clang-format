@@ -1,0 +1,43 @@
+# 基于某个默认风格（可选 Google、LLVM、Microsoft、Chromium、Mozilla、WebKit）
+BasedOnStyle: LLVM
+
+# 缩进相关设置
+IndentWidth: 4                 # 缩进宽度设置为 4 个空格
+TabWidth: 4                    # 制表符宽度为 4（即使用制表符，也视为 4 个空格宽）
+UseTab: Never                  # 永远不使用制表符，使用空格进行缩进
+
+# 大括号风格
+BraceWrapping:
+  AfterClass: true             # 类定义后换行放置大括号
+  AfterFunction: true          # 函数定义后换行放置大括号
+  AfterNamespace: true         # 命名空间后换行放置大括号
+  BeforeElse: true             # `else` 前的大括号换行
+  IndentBraces: false          # 大括号不单独缩进
+
+# 空格相关
+SpaceBeforeParens: ControlStatements  # 控制语句（如 if、while 等）后加空格
+SpaceInEmptyParentheses: false       # 禁止空括号内出现空格
+
+# 换行相关
+AllowShortFunctionsOnASingleLine: None # 不允许短函数定义在单行
+ColumnLimit: 120                      # 每行最大字符数为 120，超过后自动换行
+BreakBeforeBraces: Allman             # 使用 Allman 风格（大括号另起一行）
+PenaltyReturnTypeOnItsOwnLine: 200    # 偏好返回类型单独一行的惩罚值（越大越不允许）
+
+# 对齐和列表设置
+AlignTrailingComments: true           # 尾部注释对齐
+AlignConsecutiveAssignments: true     # 连续赋值对齐
+AlignConsecutiveDeclarations: true    # 连续声明对齐
+AllowShortBlocksOnASingleLine: false  # 禁止短块（如 `{}`）在单行
+AllowShortIfStatementsOnASingleLine: false # 禁止短的 `if` 语句放在单行
+
+# 命名空间设置
+NamespaceIndentation: All             # 命名空间内的代码全部缩进
+SortIncludes: true                    # 按字典序排序 `#include` 语句
+
+# 注释格式
+ReflowComments: true                  # 重新调整注释格式（确保换行注释对齐）
+CommentPragmas: '^ IWYU pragma:'      # 保留特定注释（如 IWYU 指令）
+
+# 指针和引用风格
+PointerAlignment: Left                # 指针符号 `*` 或引用符号 `&` 左对齐
